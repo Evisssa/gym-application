@@ -13,6 +13,7 @@ import Scheduler from './screens/Scheduler/Scheduler';
 import MemberHome from './screens/HomeScreen/MemberHome';
 import CompleteProfile from './screens/CompleteProfileScreen/CompleteProfile';
 import ClassManagement from './screens/AdminDashboard/pages/ClassManagement';
+import AdminHome from './screens/AdminDashboard/pages/AdminHome';
 
 const AppRoutes: React.FC = () => {
   const { currentUser, userRole, isProfileComplete, loading } = useAuth();
@@ -29,7 +30,7 @@ const AppRoutes: React.FC = () => {
       {currentUser ? (
         userIsAdmin ? (
           <Route path="/" element={<AdminDashboard />}>
-            <Route index element={<h1>Welcome, Admin!</h1>} />
+            <Route index element={<AdminHome />} />
             <Route path="users" element={<UserManagement />} />
             <Route path="classes" element={<ClassManagement />} />
             <Route path="scheduler" element={<Scheduler />} />

@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import AdminSidebar from './components/AdminSidebar';
+import AdminHome from './pages/AdminHome';
 
 const AdminDashboard: React.FC = () => {
   return (

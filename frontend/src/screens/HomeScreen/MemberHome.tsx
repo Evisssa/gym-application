@@ -39,7 +39,7 @@ const MemberHome: React.FC = () => {
       {isProfileComplete && (
         <div className="mt-4 text-center">
           <p className="text-green-600 mb-4">Your profile is complete!</p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mb-6">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
               onClick={() => setActiveComponent('scheduler')}
@@ -53,6 +53,17 @@ const MemberHome: React.FC = () => {
               Update Profile
             </button>
           </div>
+          <section className="mt-8">
+            <h2 className="text-xl font-semibold mb-2">Gym Rules</h2>
+            <ul className="list-disc list-inside space-y-1">
+              <li>Wear appropriate gym attire and footwear at all times.</li>
+              <li>Wipe down equipment after use.</li>
+              <li>Return weights and equipment to their proper place.</li>
+              <li>No food or drinks (except water) allowed in workout areas.</li>
+              <li>Respect other members and staff.</li>
+              <li>Report any damaged equipment to staff immediately.</li>
+            </ul>
+          </section>
         </div>
       )}
     </div>
